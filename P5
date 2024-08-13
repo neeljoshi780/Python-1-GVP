@@ -1,0 +1,12 @@
+#(5).Write a program to find out if the two blood groups match.
+
+person1=input("Person1 Blood Group:")
+person2=input("Person2 Blood Group:")
+
+if len(person1)==3 and len(person2)==3:
+    if person1==person2:
+        print("person1 and person2 Seme Blood Group")
+    else:
+        print("person1 and person2 Diffrent Blood Group")
+else:
+    print("Wrong Blood Group")    
