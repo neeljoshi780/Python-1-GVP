@@ -1,0 +1,15 @@
+#(9).Print Fibonacci sequence.
+
+def fibonacci(n):
+    a=1
+    b=0
+    sum=0
+    for temp in range(n):
+        print(sum, end=' ')
+        sum=a+b
+        a=b
+        b=sum
+    print()
+
+num = int(input("Enter the number: "))
+fibonacci(num)
