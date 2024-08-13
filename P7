@@ -1,0 +1,11 @@
+#(7.)To read a card as input and output if the card is lucky or not.
+
+lC=input("Card Name Like This eg.2,3,4,5,6,7,8,9,10,J,Q,K,A\nEnter Card:-")
+luckyCard=lC.upper()
+if len(luckyCard)==1:
+    if luckyCard=="5" or luckyCard=="9" or luckyCard=="Q" or luckyCard=="K":
+        print("Congratulations Your Are Select in Lucky Card.")
+    else:
+        print("Better Luck Next Time.")
+else:
+    print("Pls Enter Valid Card Name.!!")
