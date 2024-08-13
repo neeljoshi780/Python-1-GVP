@@ -1,0 +1,12 @@
+#(6).Find the student from CS department where the roll number may be in capital or smallcase Letters.
+
+rollNo=input("RollNo Like This eg.CS23B010\nEnter your RollNo=")
+
+if len(rollNo)==8:
+    branch=rollNo[0:2]
+    if branch=='CS' or branch=='Cs' or branch=='cS' or branch=='cs':
+        print(f'This RollNo={rollNo} is CS Department.')
+    else:
+        print(f'This RollNo={rollNo} is None CS Department.')
+else:
+    print("Invalid RollNo.!!")
