@@ -1,0 +1,28 @@
+#(11).Primality testing: Given a positive integer, check if the number is prime or not.
+
+num=int(input('Check Number:-'))
+
+if num>1:
+    for i in range(2,num):
+        if num%i==0:
+            print(f'{num} is Not Prime Number.!!')
+            break
+    else:
+        print(f'{num} is Prime Number.!!')
+else:
+    print(f'{num} is Not Prime Number.!!')
+
+#Extra Prog Find 1 To N Number Prime.
+
+'''num=int(input('Enter number:-'))
+i=2
+while i<num:
+    temp=True
+    j=2
+    while j<i:
+        if(i%j==0):
+            temp=False
+        j=j+1
+    if temp:
+        print(i)
+    i=i+1'''
