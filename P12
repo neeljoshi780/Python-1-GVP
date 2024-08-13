@@ -1,0 +1,38 @@
+#(12).Find birthdays in a month using dictionary. Birthdays in DD/MM/YY format.
+
+def takeDay():
+    while(True):
+     d=input("Enter Day:")
+     if(len(d)==1):
+        d="0"+d
+        return d
+     elif(int(d)>31 or int(d)<1):
+       print("Please Enter Valid Day..!")
+     else:
+        return d
+months={
+1:"January",
+2: "February",
+3: "March",
+4: "April",
+5: "May",
+6:"June",
+7: "July",
+8: "August",
+9: "September",
+10:"October",
+11 :"November",
+12:"December"
+}
+print("Enter Birthdate DD-MM-YYYY Format.")
+day=takeDay()
+while(True):
+    month=int(input("Enter Month:"))
+    if(month<1 or month>12):
+      print("Pls Enter Valid Month.!!")
+    else:
+        break
+y=input("Enter Year:")
+for i in months.keys():
+    if(month==i):
+      print("BirthDate: {}-{}-{}".format(day,months[i],y))
