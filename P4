@@ -1,0 +1,9 @@
+#(4).Word shuffle using string manipulation.
+
+s1="Gujarat Vidyapith Ahmedabad Computer Science"
+print("<-: Original String :->")
+print(s1,"\n")
+print("<-: Word manipulation :->")
+print(s1[8:17],s1[28:36],s1[0:7],s1[18:27],s1[37:])
+print(s1[37:],s1[28:36],s1[8:17],s1[18:27],s1[0:7])
+print(s1[18:27],s1[8:17],s1[37:],s1[0:7],s1[28:36])
