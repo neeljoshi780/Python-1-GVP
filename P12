@@ -2,11 +2,8 @@
 
 def takeDay():
     while(True):
-     d=input("Enter Day:")
-     if(len(d)==1):
-        d="0"+d
-        return d
-     elif(int(d)>31 or int(d)<1):
+     d=int(input("Enter Day:"))
+     if d>31 or d<1:
        print("Please Enter Valid Day..!")
      else:
         return d
