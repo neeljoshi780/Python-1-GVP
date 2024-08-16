@@ -3,11 +3,14 @@
 rno=input("RollNo Like This eg.CS23B010\nEnter your RollNo:-")
 rollNo=rno.upper()
 
-branch=rollNo[0:2]
-year=int(rollNo[2:4])
-degree=rollNo[4]
-position=int(rollNo[5:8])
-print('Branch  :',branch)
-print('Year    :',year)
-print('Degree  :',degree)
-print('Position:',position)
+if len(rollNo)==8:
+    branch=rollNo[0:2]
+    year=int(rollNo[2:4])
+    degree=rollNo[4]
+    position=int(rollNo[5:8])
+    print('Branch  :',branch)
+    print('Year    :',year)
+    print('Degree  :',degree)
+    print('Position:',position)
+else:
+    print("Pls Enter 8 Character RollNo.!!")
