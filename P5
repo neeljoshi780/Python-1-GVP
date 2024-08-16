@@ -1,12 +1,17 @@
 #(5).Write a program to find out if the two blood groups match.
 
-person1=input("Person1 Blood Group:")
-person2=input("Person2 Blood Group:")
+# Total Blood Group
+# A+,B+,O+,AB+,A-,B-,O-,AB-
 
-if len(person1)==3 and len(person2)==3:
-    if person1==person2:
-        print("person1 and person2 Seme Blood Group")
+p1=input("Person1 Blood Group:")
+p2=input("Person2 Blood Group:")
+person1=p1.upper()
+person2=p2.upper()
+
+if person1 and person2=="A+" or person1 and person2=="B+" or person1 and person2=="O+" or person1 and person2=="AB+" or person1 and person2=="A-" or person1 and person2=="B-" or person1 and person2=="O-" or person1 and person2=="AB-":
+    if(person1==person2):
+        print("Person1 and Person2 Seme Blood Group")
     else:
-        print("person1 and person2 Diffrent Blood Group")
+        print("Person1 and Person2 Diffrent Blood Group")
 else:
-    print("Wrong Blood Group")    
+    print("Wrong Blood Group")
