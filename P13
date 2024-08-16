@@ -1,19 +1,23 @@
 #(13).Exact change: Given a price identify if you have exact change summing up to that price?
 #(Count all combinations of coins to make a given value sum.)
 
-Price=int(input('Enter Price:'))
-temp=0
+price = int(input('Enter Price: '))
 
-currency1=int(input("Check Currency 1:"))
-currency2=int(input("Check Currency 2:"))
-currency3=int(input("Check Currency 3:"))
+currency1 = int(input("Enter Currency 1: "))
+currency2 = int(input("Enter Currency 2: "))
+currency3 = int(input("Enter Currency 3: "))
+
+combination_count = 0
 
 print(f"{currency1}-{currency2}-{currency3}")
-for c1 in range(0, 1+Price // currency1):
-    for c2 in range(0, 1+Price // currency2):
-        for c3 in range(0, 1+Price // currency3):
-            if c1*currency1 + c2*currency2 + c3*currency3 == Price:
-                temp=temp+1
-                print(c1,c2,c3)
 
-print(f"all combinations Count: {temp}")
+# Loop through possible counts of each currency to find combinations that sum up to the price
+for count1 in range(price // currency1 + 1): #10 to 0-11 exe
+    for count2 in range(price // currency2 + 1): #20 to 0-5 exe
+        for count3 in range(price // currency3 + 1): #50 to 0-2
+            total = count1 * currency1 + count2 * currency2 + count3 * currency3
+            if total == price:
+                print(count1,count2,count3)
+                combination_count += 1
+
+print(f"Total combinations found: {combination_count}")
